@@ -8,10 +8,11 @@
 		<link href="{% static 'bootstrap-min.css' %}" rel="stylesheet" />
 	</head>
 	<body>
-		<a href="{% url 'index'%}">На главную</a>
+		<a href="{% url 'index' %}">На главную</a>
+		<a href="{% url 'movie_form' %}">Добавить фильм</a>
 
 		<div class="row row-cols-5 row-cols-md-10 g-4">
-			{% for movie in movies%}
+			{% for movie in movies %}
 			<div class="col">
 				<div class="card">
 					{% if movie.img %}
@@ -27,9 +28,10 @@
 					<div class="card-body">
 						<h5 class="card-title">
 							{{ movie.name }}
-							<a href="{% url 'detail' movie.id%}">Детали</a>
+							<a href="{% url 'detail' movie.id %}">Детали</a>
 						</h5>
 						<p class="card-text">{{ movie.director }} - {{ movie.genre_id }}</p>
+						<a href="{% url 'delete' movie.id %}">Удалить</a>
 					</div>
 				</div>
 			</div>

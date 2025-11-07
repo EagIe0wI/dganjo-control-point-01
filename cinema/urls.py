@@ -10,6 +10,6 @@ urlpatterns = [
     path("movies/movie-<int:movie_id>/", views.detail, name="detail"),
     path("movies/movie-<int:movie_id>/delete/", views.delete, name="delete"),
     path("movies/", views.movies_list, name="movies_list"),
-    path("movies/add/", MovieCreateView.as_view(), name="add_form"),
-    path("movies/movie-<int:pk>/update/", MovieUpdateView.as_view(), name="update_form"),
+    path("movies/add/", MovieCreateView.as_view(), name="movie_form"),
+    path("movies/movie-<int:pk>/update/", MovieUpdateView.as_view(), name="movie_form"),
 ]
