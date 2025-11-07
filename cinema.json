@@ -1,0 +1,104 @@
+[
+{
+  "model": "cinema.user",
+  "pk": 1,
+  "fields": {
+    "login": "kubik",
+    "password": "realkub",
+    "name": "ivan",
+    "email": "ivan@mail.ru",
+    "reg_data": "2025-10-10T09:28:56.867Z"
+  }
+},
+{
+  "model": "cinema.genre",
+  "pk": 4,
+  "fields": {
+    "name": "Фантастика"
+  }
+},
+{
+  "model": "cinema.genre",
+  "pk": 5,
+  "fields": {
+    "name": "Хоррор"
+  }
+},
+{
+  "model": "cinema.genre",
+  "pk": 6,
+  "fields": {
+    "name": "Комедия"
+  }
+},
+{
+  "model": "cinema.genre",
+  "pk": 7,
+  "fields": {
+    "name": "Драма"
+  }
+},
+{
+  "model": "cinema.movie",
+  "pk": 1,
+  "fields": {
+    "name": "Ghost in the Shell",
+    "director": "Мамору Осии",
+    "year_of_manufacture": 1995,
+    "genre_id": 4,
+    "img": "ghost-in-the-shell_1F0yVwe.png"
+  }
+},
+{
+  "model": "cinema.movie",
+  "pk": 2,
+  "fields": {
+    "name": "Five Nights at Freddy's",
+    "director": "Эмма Тамми",
+    "year_of_manufacture": 2023,
+    "genre_id": 5,
+    "img": "fnaf.png"
+  }
+},
+{
+  "model": "cinema.movie",
+  "pk": 3,
+  "fields": {
+    "name": "Spirited Away",
+    "director": "Hayao Miyazaki",
+    "year_of_manufacture": 2001,
+    "genre_id": null,
+    "img": "spirited-away.png"
+  }
+},
+{
+  "model": "cinema.watch_history",
+  "pk": 1,
+  "fields": {
+    "movie_id": 1,
+    "user_id": 1,
+    "viewing_date": "2025-10-10T09:33:30.161Z",
+    "grade": "5"
+  }
+},
+{
+  "model": "cinema.subscription",
+  "pk": 1,
+  "fields": {
+    "subscription_type": "1",
+    "start_date": "2025-10-10T09:29:10Z",
+    "end_date": "2026-10-10T09:29:13Z",
+    "user_id": 1
+  }
+},
+{
+  "model": "cinema.payment",
+  "pk": 1,
+  "fields": {
+    "sum": 5000.0,
+    "date_of_pay": "2025-10-10T09:33:47.430Z",
+    "user_id": 1,
+    "subscription_id": 1
+  }
+}
+]
