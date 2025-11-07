@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -11,7 +13,11 @@
 		<p></p>
 		{{ movie.genre_id }}
 		<p></p>
+		{% if movie.img %}
 		<img width="150px" src="{{ movie.img.url }}" />
+		{% else %}
+		<img width="150px" src="{% static 'def-img.png' %}" />
+		{% endif %}
 		<p></p>
 		<a href="{% url 'movies_list'%}">К фильмам</a>
 	</body>
