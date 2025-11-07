@@ -15,7 +15,7 @@
 
 		<p></p>
 
-		{% if user.is_superuser %}
+		{% if user.is_staff %}
 		<a href="{% url 'admin:index'%}">Панель администратора</a>
 		{% endif %}
 
