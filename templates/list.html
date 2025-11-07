@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>movies_list</title>
+		<link href="{% static 'bootstrap-min.css' %}" rel="stylesheet" />
+	</head>
+	<body>
+		<a href="{% url 'index'%}">На главную</a>
+
+		<div class="row row-cols-5 row-cols-md-10 g-4">
+			{% for movie in movies%}
+			<div class="col">
+				<div class="card">
+					<img width="150px" src="{{ movie.img.url }}" class="card-img-top" alt="..." />
+					<div class="card-body">
+						<h5 class="card-title">
+							{{ movie.name }}
+							<a href="{% url 'detail' movie.id%}">Детали</a>
+						</h5>
+						<p class="card-text">{{ movie.director }} - {{ movie.genre_id }}</p>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</body>
+</html>
